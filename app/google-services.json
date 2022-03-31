@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "406870167472",
+    "firebase_url": "https://farmai-bd386-default-rtdb.firebaseio.com",
+    "project_id": "farmai-bd386",
+    "storage_bucket": "farmai-bd386.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406870167472:android:4cf1495399e36ad89ed075",
+        "android_client_info": {
+          "package_name": "com.example.farmalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406870167472-q1lckfrb3qr0vekmhrujfnome0hshd0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJnYL_nY7-OEM8HDPYXd0zJLHPm2TQVls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406870167472-q1lckfrb3qr0vekmhrujfnome0hshd0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

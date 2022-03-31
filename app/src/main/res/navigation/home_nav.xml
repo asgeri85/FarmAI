@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.farmalapp.screen.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.farmalapp.screen.tahephoto.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo">
+        <action
+            android:id="@+id/action_photoFragment_to_soilDetailFragment"
+            app:destination="@id/soilDetailFragment" />
+        <action
+            android:id="@+id/action_photoFragment_to_soilInfoFragment"
+            app:destination="@id/soilInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soilDetailFragment"
+        android:name="com.example.farmalapp.screen.soildetail.SoilDetailFragment"
+        android:label="fragment_soil_detail"
+        tools:layout="@layout/fragment_soil_detail">
+        <action
+            android:id="@+id/action_soilDetailFragment_to_cropsFragment"
+            app:destination="@id/cropsFragment" />
+        <argument
+            android:name="bitmap"
+            app:argType="com.example.farmalapp.model.PhotoModel" />
+        <action
+            android:id="@+id/action_soilDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/soilDetailFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/cropsFragment"
+        android:name="com.example.farmalapp.screen.crops.CropsFragment"
+        android:label="fragment_crops"
+        tools:layout="@layout/fragment_crops">
+        <argument
+            android:name="soil"
+            app:argType="com.example.farmalapp.model.SoilResponseModel"
+            app:nullable="true" />
+        <argument
+            android:name="durum"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.farmalapp.screen.location.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+    <fragment
+        android:id="@+id/soilInfoFragment"
+        android:name="com.example.farmalapp.screen.soilInfo.SoilInfoFragment"
+        android:label="fragment_soil_info"
+        tools:layout="@layout/fragment_soil_info">
+        <action
+            android:id="@+id/action_soilInfoFragment_to_cropsFragment"
+            app:destination="@id/cropsFragment" />
+    </fragment>
+</navigation>
