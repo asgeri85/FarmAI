@@ -2,18 +2,18 @@
     <string name="app_name">FarmAlApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="txt_btn_home_photo"><![CDATA[Toprağın fotoğrafı & bilgileriyle analizini yap]]></string>
-    <string name="txt_home_weather_btn">Aylık hava durumu tahminini öğren</string>
+    <string name="txt_btn_home_photo">Analyze the soil with photos and information</string>
+    <string name="txt_home_weather_btn">Find out the monthly weather forecast</string>
     <string name="txt_logo_home">FarmAI</string>
-    <string name="txt_camera_title">Fotoğraf Çek\nve Toprağının\nVerimliliğini Öğren.</string>
-    <string name="btn_photo_title">Değerleri Elle Gir</string>
+    <string name="txt_camera_title">Take a photo and your land Learn Efficiency.</string>
+    <string name="btn_photo_title">Enter values manually</string>
     <string name="solid_detail_abstract_txt">• Siltli toprak kumludur ve çok küçük kaya ve mineral parçacıklarından oluşur.</string>
-    <string name="crops_title_txt">Sizin İçin\nÖnerilen Mahsüller:</string>
+    <string name="crops_title_txt">Recommended Crops For You:</string>
     <string name="card_crops_titile_txt">Mısır</string>
     <string name="title_location_txt">Konum Bilginizi Düzenleyerek Daha\nDoğru Sonuçlar\nElde Edin.</string>
     <string name="text_location_btn">Konumu Otomatik Bul</string>
     <string name="text_select_btn">Seç</string>
-    <string name="splash_title_txt">Fotoğraf Çek\nve Toprağının\nVerimliliğini Öğren.</string>
+    <string name="splash_title_txt">Take a Photo and Find out about the Fertility of Your Soil.</string>
     <string name="title_activity_login">LoginActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -23,23 +23,27 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="login_btn_title">Giriş Yap</string>
-    <string name="login_email_hint">Kullanıcı Adı</string>
-    <string name="login_pass_hint">Şifre</string>
-    <string name="login_text_title">Şifremi unuttum</string>
-    <string name="register_text_title">Bir Hesap\nOluştur.</string>
-    <string name="register_mail_hint">Mail Adresi</string>
-    <string name="register_pass1_hint">Şifre</string>
-    <string name="register_pass2_hint">Şifre Tekrar</string>
-    <string name="register_btn_title">Kayıt Ol</string>
-    <string name="soilDetail_btn_title">Yetişebilecek mahsülleri gör</string>
-    <string name="soilDetail_error_title">Hata !!!</string>
-    <string name="info_text_title">Değerleri Giriniz.</string>
+    <string name="login_btn_title">Login</string>
+    <string name="login_email_hint">Username</string>
+    <string name="login_pass_hint">Password</string>
+    <string name="login_text_title">I Forgot My Password</string>
+    <string name="register_text_title">Register</string>
+    <string name="register_mail_hint">E-mail</string>
+    <string name="register_pass1_hint">Password</string>
+    <string name="register_pass2_hint">Re Password</string>
+    <string name="register_btn_title">Register</string>
+    <string name="soilDetail_btn_title">Recommended crops</string>
+    <string name="soilDetail_error_title">Error !!!</string>
+    <string name="info_text_title">Enter Values.</string>
     <string name="info_ph_text">pH</string>
-    <string name="info_pot_text">Potasyum</string>
-    <string name="info_nitrogen_text">Azot</string>
-    <string name="info_pos_text">Fosfor</string>
-    <string name="info_btn_title">Önerilen mahsülleri gör</string>
-    <string name="splash_registerBtn_title">Kayıt Ol</string>
-    <string name="splash_loginBtn_title">Giriş Yap</string>
+    <string name="info_pot_text">Potassium</string>
+    <string name="info_nitrogen_text">Nitrogen</string>
+    <string name="info_pos_text">Phosphorus</string>
+    <string name="info_btn_title">Recommended crops</string>
+    <string name="splash_registerBtn_title">Sign Up</string>
+    <string name="splash_loginBtn_title">Login</string>
+    <string name="detail_text">The silty soil is sandy and consists of very small particles of rock and minerals. Some characteristics of silty soil are: Small pores predominate in silty soils. They have low to medium permeability. Silty soils have medium water holding capacity.</string>
+    <string name="txt_detail">
+Systemic-acting fungicides are a good option for powdery mildew. Bayfidan and Calixin are some of them. Apart from these, you can also benefit from contact-effect drugs. These are mostly sulfur-containing drugs and play an important role in the treatment of powdery mildew disease.</string>
+    <string name="photo_title">Crop health to analyze take a photo.</string>
 </resources>

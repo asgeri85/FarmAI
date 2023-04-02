@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.farmalapp.R
 import com.example.farmalapp.databinding.FragmentCropsBinding
+import com.example.farmalapp.model.CropResponseModel
 import com.example.farmalapp.screen.soildetail.ApiStatus
 import com.example.farmalapp.screen.soildetail.SoilDetailViewModel
 
@@ -30,19 +31,6 @@ class CropsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (args.durum == 1) {
-            Thread.sleep(300)
-            viewModel.getCrops()
-        } else {
-            args.soil?.let {
-                crops = it.crop
-                cropAdapter.updateList(crops)
-            }
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -51,6 +39,15 @@ class CropsFragment : Fragment() {
                 GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
             rvCrops.setHasFixedSize(true)
             rvCrops.adapter = cropAdapter
+
+            val list= arrayListOf<String>()
+
+            list.add("Apple")
+            list.add("Pear")
+            list.add("Peach")
+            list.add("Corn")
+
+            cropAdapter.updateList(list)
 
             floatingActionButton.setOnClickListener {
                 findNavController().popBackStack(R.id.homeFragment, false)

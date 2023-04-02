@@ -18,8 +18,8 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:backgroundTint="#272727"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#037238"
             app:cardCornerRadius="24dp"
             app:cardElevation="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -33,15 +33,17 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    app:layout_constraintHeight_max="150dp"
+                    app:layout_constraintWidth_max="120dp"
                     app:layout_constraintBottom_toTopOf="@+id/textView4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/plant" />
+                    app:srcCompat="@drawable/plantphoto" />
 
                 <TextView
                     android:id="@+id/textView4"

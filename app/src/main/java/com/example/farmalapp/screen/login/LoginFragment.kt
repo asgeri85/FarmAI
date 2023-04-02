@@ -37,7 +37,8 @@ class LoginFragment : Fragment() {
         observeLiveData()
 
         binding.btnLogin.setOnClickListener {
-            signIn()
+            startActivity(Intent(requireContext(), MainActivity::class.java))
+            requireActivity().finish()
         }
 
         binding.fabLoginNavigation.setOnClickListener {

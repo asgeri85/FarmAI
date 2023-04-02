@@ -35,7 +35,7 @@ class SoilInfoFragment : Fragment() {
         binding.btnSoilInfo.setOnClickListener {
             uploadValueSoil()
         }
-        observeLiveData()
+        //observeLiveData()
     }
 
     private fun uploadValueSoil() {
@@ -46,7 +46,9 @@ class SoilInfoFragment : Fragment() {
             val potassium = editPotSoil.text.toString().trim()
 
             if (ph.isNotEmpty() && nitrogen.isNotEmpty() && phosphorus.isNotEmpty() && potassium.isNotEmpty()) {
-                soilViewModel.uploadValue(ph, nitrogen, phosphorus, potassium)
+               // soilViewModel.uploadValue(ph, nitrogen, phosphorus, potassium)
+                findNavController().navigate(SoilInfoFragmentDirections.actionSoilInfoFragmentToCropsFragment(
+                    1))
             } else {
                 Toast.makeText(requireContext(), "Tüm alanları doldurunuz", Toast.LENGTH_LONG)
                     .show()
@@ -61,7 +63,7 @@ class SoilInfoFragment : Fragment() {
                 ApiStatus.DONE -> {
                     binding.progressBarIInfo.visibility = View.GONE
                     findNavController().navigate(SoilInfoFragmentDirections.actionSoilInfoFragmentToCropsFragment(
-                        null, 1))
+                         1))
                 }
                 ApiStatus.LOADING -> binding.progressBarIInfo.visibility = View.VISIBLE
                 else -> {

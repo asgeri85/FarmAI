@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3C3C"
+    android:background="@color/white"
     tools:context=".screen.crops.CropsFragment">
 
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#3B3B3B"
+        android:backgroundTint="#037238"
         android:clickable="true"
         android:src="@drawable/ic_baseline_navigate_before_24"
         app:backgroundTint="#4F4F4F"
@@ -26,13 +26,15 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/crops_title_txt"
-        android:textColor=" #FFFFFF"
+        android:textColor="@color/black"
         android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
 

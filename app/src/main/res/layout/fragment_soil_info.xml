@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3C3C"
+    android:background="@color/white"
     tools:context=".screen.soilInfo.SoilInfoFragment">
 
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#3B3B3B"
+        android:backgroundTint="#037238"
         android:clickable="true"
         android:src="@drawable/ic_baseline_navigate_before_24"
         app:backgroundTint="#4F4F4F"
@@ -31,8 +31,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="@string/info_text_title"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fabInfoNavigate" />
 
@@ -44,7 +45,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="32dp"
-        app:boxBackgroundColor="#272727"
+        app:boxBackgroundColor="#0BC263"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
@@ -66,7 +67,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="82dp"
         android:text="@string/info_ph_text"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -78,7 +79,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="75dp"
         android:text="@string/info_pot_text"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -91,7 +92,7 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:boxBackgroundColor="#272727"
+        app:boxBackgroundColor="#0BC263"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/layouttPhSoil">
@@ -113,7 +114,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="70dp"
         android:text="@string/info_nitrogen_text"
-        android:textColor=" #FFFFFF"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -123,12 +124,11 @@
         style="@style/OutlinedRoundedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:boxBackgroundColor="#272727"
+        app:boxBackgroundColor="#0BC263"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/layoutPotSoil"
         app:layout_constraintTop_toBottomOf="@+id/layoutPotSoil">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -145,10 +145,10 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
         android:text="@string/info_pos_text"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -158,12 +158,11 @@
         style="@style/OutlinedRoundedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:boxBackgroundColor="#272727"
+        app:boxBackgroundColor="#0BC263"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/layoutNitSoil"
         app:layout_constraintTop_toBottomOf="@+id/layoutNitSoil">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -181,7 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:backgroundTint="#272727"
+        android:backgroundTint="#037238"
         android:text="@string/info_btn_title"
         android:textAlignment="center"
         android:textAllCaps="false"

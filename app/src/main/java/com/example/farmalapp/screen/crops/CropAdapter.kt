@@ -31,8 +31,14 @@ class CropAdapter() : RecyclerView.Adapter<CropAdapter.CropHolder>() {
             cardCropBinding.crop = crop
             cardCropBinding.executePendingBindings()
 
-            if (crop.equals("Armut")) {
-                cardCropBinding.imageView2.setImageResource(R.drawable.ic_pear)
+            if (crop == "Apple") {
+                cardCropBinding.imageView2.setImageResource(R.drawable.apple)
+            }else if (crop=="Pear"){
+                cardCropBinding.imageView2.setImageResource(R.drawable.armud)
+            }else if (crop == "Peach"){
+                cardCropBinding.imageView2.setImageResource(R.drawable.peach)
+            }else if (crop=="Corn"){
+                cardCropBinding.imageView2.setImageResource(R.drawable.corn)
             }
         }
     }

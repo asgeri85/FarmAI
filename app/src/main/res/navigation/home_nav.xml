@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_photoFragment_to_soilInfoFragment"
             app:destination="@id/soilInfoFragment" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/soilDetailFragment"
@@ -45,16 +48,15 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/soilDetailFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/cropsFragment"
         android:name="com.example.farmalapp.screen.crops.CropsFragment"
         android:label="fragment_crops"
         tools:layout="@layout/fragment_crops">
-        <argument
-            android:name="soil"
-            app:argType="com.example.farmalapp.model.SoilResponseModel"
-            app:nullable="true" />
         <argument
             android:name="durum"
             app:argType="integer" />

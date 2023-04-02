@@ -14,6 +14,8 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.net.Uri
 import android.widget.Toast
+import androidx.navigation.fragment.navArgs
+import com.example.farmalapp.R
 import com.example.farmalapp.databinding.FragmentPhotoBinding
 import com.example.farmalapp.model.PhotoModel
 import com.example.farmalapp.screen.soildetail.ApiStatus
@@ -25,6 +27,7 @@ class PhotoFragment : Fragment() {
     private val binding get() = _binding!!
     private val photoViewModel by lazy { PhotoViewModel() }
     private lateinit var phm: PhotoModel
+    private val args:PhotoFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +40,14 @@ class PhotoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observeLiveData()
+
+        if (args.type==2){
+            binding.textView2.text=getString(R.string.photo_title)
+            binding.btnVareblePhoto.visibility=View.INVISIBLE
+        }else{
+            binding.textView2.text=getString(R.string.txt_camera_title)
+            binding.btnVareblePhoto.visibility=View.VISIBLE
+        }
 
         binding.apply {
 
@@ -52,8 +63,6 @@ class PhotoFragment : Fragment() {
                 findNavController().navigate(PhotoFragmentDirections.actionPhotoFragmentToSoilInfoFragment())
             }
         }
-
-
     }
 
     private fun observeLiveData() {
@@ -62,7 +71,7 @@ class PhotoFragment : Fragment() {
                 ApiStatus.DONE -> {
                     binding.progressBarPhoto.visibility = View.GONE
                     findNavController().navigate(PhotoFragmentDirections.actionPhotoFragmentToSoilDetailFragment(
-                        phm))
+                        phm,args.type))
                 }
                 ApiStatus.LOADING -> binding.progressBarPhoto.visibility = View.VISIBLE
                 else -> {
@@ -89,7 +98,9 @@ class PhotoFragment : Fragment() {
             phm = PhotoModel(imageBitmap)
             imageBitmap.let {
                 val uri = getImageUriFromBitmap(requireContext(), imageBitmap)
-                photoViewModel.uploadImage(uri)
+                findNavController().navigate(PhotoFragmentDirections.actionPhotoFragmentToSoilDetailFragment(
+                    phm,args.type))
+                // photoViewModel.uploadImage(uri)
             }
         }
     }

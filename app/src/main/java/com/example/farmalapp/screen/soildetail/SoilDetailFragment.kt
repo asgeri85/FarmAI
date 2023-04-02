@@ -33,8 +33,15 @@ class SoilDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Thread.sleep(2000)
-        soilDetailViewModel.getSoilData()
+        if (navArgs.type==2){
+            binding.txtSoilNameDetail.text="Ashy"
+            binding.txtSolidDetail1.text=getString(R.string.txt_detail)
+            binding.btnSolidDetail.visibility=View.INVISIBLE
+        }else{
+            binding.txtSoilNameDetail.text="Silty Soil"
+            binding.txtSolidDetail1.text=getString(R.string.detail_text)
+            binding.btnSolidDetail.visibility=View.VISIBLE
+        }
 
         binding.apply {
             fabNavigateDetailSoil.setOnClickListener {
@@ -42,14 +49,14 @@ class SoilDetailFragment : Fragment() {
             }
 
             btnSolidDetail.setOnClickListener {
-                findNavController().navigate(SoilDetailFragmentDirections.actionSoilDetailFragmentToCropsFragment(
-                    model,
-                    0))
+                findNavController().navigate(
+                    SoilDetailFragmentDirections.actionSoilDetailFragmentToCropsFragment(0)
+                )
             }
 
             imageSolidDetail.setImageBitmap(navArgs.bitmap.bitmap)
         }
-        observeLiveData()
+        //observeLiveData()
 
     }
 

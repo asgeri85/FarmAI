@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3C3C"
+    android:background="@color/white"
     tools:context=".screen.login.LoginFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -13,22 +13,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#272727"
+        android:backgroundTint="#037238"
         android:clickable="true"
         android:src="@drawable/ic_baseline_navigate_before_24"
-        app:backgroundTint="#4F4F4F"
         app:borderWidth="1dp"
         app:fabSize="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white" />
+        app:tint="@color/white"
+        android:focusable="true" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/white"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#037238"
         android:paddingStart="40dp"
         android:paddingTop="15dp"
         android:paddingEnd="40dp"
@@ -36,12 +36,13 @@
         android:text="@string/login_btn_title"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:cornerRadius="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -52,18 +53,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="40dp"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="#0BC263" />
 
     <TextView
         android:id="@+id/textView12"
@@ -71,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
-        android:text="Hoşgeldin."
+        android:text="Welcome"
         android:textColor="@color/white"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +91,7 @@
         android:layout_marginTop="170dp"
         android:layout_marginEnd="24dp"
         android:textColorHint="@color/white"
-        app:boxBackgroundColor="#272727"
+        app:boxBackgroundColor="#0BC263"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12">
@@ -110,7 +115,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:textColorHint="@color/white"
-        app:boxBackgroundColor="#272727"
+        app:boxBackgroundColor="#0BC263"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailLayout">

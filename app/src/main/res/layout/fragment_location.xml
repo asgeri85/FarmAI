@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C3C3C"
+    android:background="#0BC263"
     tools:context=".screen.location.LocationFragment">
 
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#3B3B3B"
+        android:backgroundTint="#037238"
         android:clickable="true"
         android:src="@drawable/ic_baseline_navigate_before_24"
         app:backgroundTint="#4F4F4F"

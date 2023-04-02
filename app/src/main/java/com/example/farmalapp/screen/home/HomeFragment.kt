@@ -28,21 +28,25 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val auth = FirebaseAuth.getInstance().currentUser
 
-        if (auth == null) {
+        /*if (auth == null) {
             startActivity(Intent(requireContext(), LoginActivity::class.java))
             requireActivity().finish()
-        }
+        }*/
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnHomePhoto.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPhotoFragment())
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPhotoFragment(1))
         }
 
         binding.btnHomeWeather.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLocationFragment())
+        }
+
+        binding.btnHomePlant.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPhotoFragment(2))
         }
     }
 
